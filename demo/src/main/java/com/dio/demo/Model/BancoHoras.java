@@ -6,6 +6,8 @@ import java.time.LocalDateTime;
 
 import javax.persistence.Embeddable;
 import javax.persistence.EmbeddedId;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 import lombok.AllArgsConstructor;
@@ -20,10 +22,12 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor   // costrutor sem 
 @EqualsAndHashCode
-@Builder 
+@Builder
+@Entity
 public class BancoHoras {
 	
 	@EmbeddedId
+	@Id
 	private BancoHorasId id;
 	private LocalDateTime dataTrabalhada;
 	private BigDecimal quantidadeHoras;

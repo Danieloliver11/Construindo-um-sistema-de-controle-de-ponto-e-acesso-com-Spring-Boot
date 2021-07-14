@@ -3,6 +3,8 @@ package com.dio.demo.Model;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 
@@ -18,9 +20,10 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor   // costrutor sem 
 @EqualsAndHashCode
-@Builder 
+@Builder
+@Entity
 public class Usuario {
-	
+	@Id
 	private Long id;
 	
 	private String nome;

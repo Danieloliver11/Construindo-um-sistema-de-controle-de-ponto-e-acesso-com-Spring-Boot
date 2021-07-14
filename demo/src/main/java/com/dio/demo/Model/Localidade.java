@@ -1,5 +1,7 @@
 package com.dio.demo.Model;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
@@ -16,8 +18,9 @@ import lombok.Setter;
 @NoArgsConstructor   // costrutor sem 
 @EqualsAndHashCode
 @Builder 
+@Entity
 public class Localidade {
-	
+	@Id
 	private Long id;
 	
 	@ManyToOne                          // >>>
